@@ -1,1 +1,67 @@
-<p>login works!</p>
+<div id="login_form" class="block p-6 rounded-lg shadow-lg bg-white max-w-sm">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="flex justify-center items-center"> 
+            <img src="../../../../assets/logo_1.png" alt="logo">
+        </div>
+        <div class="flex justify-center items-center">
+            <h3 class="font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600">LOGIN</h3>
+        </div>
+        <div id="field" class="form-group mb-6">
+            <input type="text"  formControlName="user_name"class="form-control
+            mar
+            block
+            w-full
+            px-3
+            py-1.5
+            text-base
+            font-normal
+            text-gray-700
+            bg-white bg-clip-padding
+            border border-solid border-gray-300
+            rounded
+            transition
+            ease-in-out
+            mt-4
+            rounded-t-lg
+            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInputUserName"
+            aria-describedby="emailHelp" placeholder="Nom d'utilisateur" required>
+        </div>
+        <div id="field" class="form-group mb-6">
+            <input type="password" formControlName="password" class="form-control block
+            w-full
+            px-3
+            py-1.5
+            text-base
+            font-normal
+            text-gray-700
+            bg-white bg-clip-padding
+            border border-solid border-gray-300
+            rounded
+            transition
+            ease-in-out
+            m-0
+            rounded-t-lg
+            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInputPassword2"
+            placeholder="Mot de passe" required>
+        </div>
+        <button type="submit" [disabled]="loginForm.invalid" class="
+            w-full
+            px-6
+            py-2.5
+            bg-blue-600
+            text-white
+            font-medium
+            text-xs
+            leading-tight
+            uppercase
+            rounded
+            shadow-md
+            hover:cursor-pointer
+            hover:bg-blue-700 hover:shadow-lg
+            focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
+            active:bg-blue-800 active:shadow-lg
+            transition
+            duration-150
+            ease-in-out">Login</button>
+    </form>
+  </div>
