@@ -25,6 +25,7 @@
             rounded-t-lg
             focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInputUserName"
             aria-describedby="emailHelp" placeholder="Nom d'utilisateur" required>
+            <p *ngIf="myErrror('user_name', 'required')">Champ requis</p>
         </div>
         <div id="field" class="form-group mb-6">
             <input type="password" formControlName="password" class="form-control block
@@ -43,6 +44,7 @@
             rounded-t-lg
             focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInputPassword2"
             placeholder="Mot de passe" required>
+            <p *ngIf="myErrror('password', 'required')">Champ requis</p>
         </div>
         <button class="button-9"  [disabled]="loginForm.invalid" role="button">Login</button>
     </form>

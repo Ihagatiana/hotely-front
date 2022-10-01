@@ -24,4 +24,7 @@ export class LoginComponent implements OnInit {
   onSubmit(){
     console.log(this.loginForm.value);
   }
+
+  public myErrror = (controlName: string, errorName: string) =>
+    this.loginForm.controls[controlName].hasError(errorName);
 }
