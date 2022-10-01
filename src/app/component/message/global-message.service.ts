@@ -32,7 +32,7 @@ export class GlobalMessageService {
   }
   remove(message: Message): void {
     let index = this._messages.indexOf(message);
-    this._messages.splice(index);
+    this._messages.splice(index, 1);
     this.messageSubject.next(this._messages);
   }
   clear(): void {

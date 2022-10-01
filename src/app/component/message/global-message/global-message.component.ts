@@ -30,4 +30,8 @@ export class GlobalMessageComponent implements OnInit, OnDestroy {
     this.messageSubscription.unsubscribe();
   }
 
+  close(message: Message): void {
+    this.globalMessageService.remove(message);
+  }
+
 }
