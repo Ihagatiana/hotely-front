@@ -1,0 +1,88 @@
+<div class="flex flex-col">
+    <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+      <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+        <div class="overflow-hidden">
+            <button (click)="onAddNewControl()" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded items-right">
+                <span class="iconify" data-icon="ic:add"></span>
+            </button>
+            <table class="min-w-full">
+                <thead class="border-b">
+                    <tr>
+                    <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                        Numero
+                    </th>
+                    <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                        Type
+                    </th>
+                    <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                        Etat
+                    </th>
+                    <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                        
+                    </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-b" *ngFor="let roomControl of roomForm.controls; let i = index">
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            <form [formGroup]="get_control(i)">
+                                <input type="text" id="designation" 
+                                        class="bg-gray-50 border 
+                                                border-gray-300 
+                                                text-gray-900 text-sm rounded-lg 
+                                                focus:ring-blue-500 
+                                                focus:border-blue-500 block w-full p-2.5 
+                                                dark:placeholder-gray-400 
+                                                dark:focus:ring-blue-500 
+                                                dark:focus:border-blue-500" formControlName="designation">
+                            </form>
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            <form [formGroup]="get_control(i)">
+                                    <select class="form-select appearance-none
+                                        bg-gray-50 border 
+                                        border-gray-300 
+                                        text-gray-900 text-sm rounded-lg 
+                                        focus:ring-blue-500 
+                                        focus:border-blue-500 block w-full p-2.5 
+                                        dark:placeholder-gray-400 
+                                        dark:focus:ring-blue-500 
+                                        dark:focus:border-blue-500" aria-label="Default select example" formControlName="type_room_id">
+                                            <option selected>Open this select menu</option>
+                                            <option value="2">One</option>
+                                            <option value="1">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                            </form>
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            <form [formGroup]="get_control(i)">
+                                <input type="text" id="designation" 
+                                        class="bg-gray-50 border 
+                                                border-gray-300 
+                                                text-gray-900 text-sm rounded-lg 
+                                                focus:ring-blue-500 
+                                                focus:border-blue-500 block w-full p-2.5 
+                                                dark:placeholder-gray-400 
+                                                dark:focus:ring-blue-500 
+                                                dark:focus:border-blue-500" formControlName="state">
+                            </form>
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            <div class="flex-center-wrap">
+                                <a class="edit" *ngIf="get_control(i).disabled" (click)="onEdit(i)">
+                                    <span class="iconify" data-icon="ic:edit"></span>
+                                </a>
+                                <span class="tire-bar">|</span>
+                                <a class="delete" title="Delete" (click)="onDelete(i)">
+                                    <span class="iconify" data-icon="fluent:delete-28-filled"></span>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+      </div>
+    </div>
+  </div>
