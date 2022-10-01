@@ -1,11 +1,12 @@
 <div id="login_form" class="block p-6 rounded-lg shadow-lg bg-white max-w-sm">
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-        <div class="flex justify-center items-center"> 
+        <div class="flex justify-center items-center">
             <img src="../../../../assets/logo_1.png" alt="logo">
         </div>
         <div class="flex justify-center items-center">
             <h3 class="font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600">LOGIN</h3>
         </div>
+        <app-global-message></app-global-message>
         <div id="field" class="form-group mb-6">
             <input type="text"  formControlName="user_name"class="form-control
             mar
