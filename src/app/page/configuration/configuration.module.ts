@@ -6,13 +6,15 @@ import { ConfigurationComponent } from './configuration.component';
 import { SideMenuComponent } from './side-menu/side-menu.component';
 import { RoomComponent } from './room/room.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PersonComponent } from './person/person.component';
 
 
 @NgModule({
   declarations: [
     ConfigurationComponent,
     SideMenuComponent,
-    RoomComponent
+    RoomComponent,
+    PersonComponent
   ],
   imports: [
     CommonModule,

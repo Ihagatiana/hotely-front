@@ -65,7 +65,7 @@ export class RoomComponent implements OnInit {
         this.roomService.emitRoomList(data['data'])
         for (const element of data['data']) {
           const group = this.formBuilder.group({
-            'id':[{value: element['id'], disabled:true}, [Validators.required]],
+            'id':[{value: element['id'], disabled:true}],
             'designation':[{value: element['designation'], disabled:true}, [Validators.required]],
             'type_room_id': [{value:element['type_room_id'], disabled:true}, [Validators.required]],
             'state': [{value:element['state'],disabled:true}, [Validators.required]]
