@@ -21,3 +21,15 @@
     width: 40px;
     line-height: 40px;
 }
+
+.configuration-main-page{
+    padding-left: 16rem;
+    transition: ease 0.5s;
+}
+
+@media screen and (max-width: 767px) {
+    .configuration-main-page{
+        
+        padding-left: 15px !important;
+    }
+  }
